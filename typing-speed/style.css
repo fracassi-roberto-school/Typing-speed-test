@@ -1,0 +1,156 @@
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ General ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;800&display=swap');
+html {
+    box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Typography ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+body {
+    font-family: 'Raleway', sans-serif;
+    font-size: 1.2rem;
+    line-height: 1.5;
+    background-color: #edf4ed;
+    color: #51291e;
+}
+
+h1 {
+    font-size: 2rem;
+}
+
+h2,
+label {
+    font-size: 1.5rem;
+}
+
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Component ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+.head {
+    min-height: 30vh;
+}
+
+.text-area {
+    width: 100%;
+    min-height: 200px;
+}
+
+.custom-text-area {
+    min-height: 100px;
+    width: 100%;
+}
+
+@media screen and (min-width: 768px) {
+    .custom-text-area {
+        width: 50%;
+    }
+}
+
+textarea,
+textarea:focus {
+    outline: none;
+    border: 2px solid #301014;
+    border-radius: 5px;
+    resize: none;
+    background-color: #edf4ed;
+    color: #301014;
+}
+
+.timer {
+    font-size: 3rem;
+}
+
+#reset {
+    padding: .5em 1em;
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #301014;
+    background: #edf4ed;
+    border: 10px solid #301014;
+}
+
+#reset:hover {
+    color: #edf4ed;
+    background-color: #301014;
+}
+
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ On event ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+.error {
+    border: 2px solid #ff8200;
+    color: #ff8200;
+}
+
+textarea:focus.error {
+    border: 2px solid #ff8200;
+    color: #ff8200;
+}
+
+.succes {
+    border: 2px solid #d44d5c;
+    color: #d44d5c;
+}
+
+textarea:focus.succes {
+    border: 2px solid #d44d5c;
+    color: #d44d5c;
+}
+
+
+/* Hide element by using same color as background, need element space 
+for putting success message with position:relative  */
+
+.hidden {
+    color: #edf4ed;
+}
+
+
+/* succes message */
+
+.hide {
+    display: none;
+}
+
+.succes-text {
+    color: #d44d5c;
+    position: absolute;
+    width: 100%;
+}
+
+@keyframes fontbulger {
+    0%,
+    100% {
+        font-size: 1.5rem;
+    }
+    10% {
+        font-size: 1.7rem;
+    }
+    30% {
+        font-size: 1.3rem;
+    }
+    50% {
+        font-size: 1.6rem;
+    }
+    57% {
+        font-size: 1.5rem;
+    }
+    64% {
+        font-size: 1.5rem;
+    }
+}
+
+.succes-text {
+    animation: fontbulger 2s infinite;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: cubic-bezier(0.280, 0.840, 0.420, 1);
+}

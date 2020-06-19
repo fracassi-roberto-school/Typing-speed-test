@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>JS Typing Speed Test</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header class="head container d-flex flex-column justify-content-center">
+        <h1 class="text-center w-75 mx-auto mt-3">Test Your Typing Speed</h1>
+        <p class="text-center my-3 w-75 mx-auto">Duplicate the text provided below. You can also use custom text, just paste it in the second box. When you make an error, the box will change color. The clock will start when you start your text and will stop when the two texts match.</p>
+    </header>
+
+
+    <section class="container">
+        <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Custom test input ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+        <div class="row">
+            <div class="col-12 my-4 px-0">
+                <form>
+                    <label for="test-model" class="d-block text-center my-2 pb-2">If you have one, write or paste custom text for test here</label>
+                    <div class="d-flex justify-content-center">
+                        <textarea class="custom-text-area mx-auto px-4 py-2" id="test-model" placeholder="Paste optional custom text here"></textarea>
+                    </div>
+                </form>
+
+            </div>
+        </div>
+
+        <div class="row">
+            <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ origin text ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+            <div class="col-12 col-md-6 my-4 px-0">
+                <div class="d-flex flex-column h-100">
+                    <h2 class="text-center my-2 pb-2">Text to be copied</h2>
+                    <p class="text-center my-auto px-4" id="origin-text">I became infected with happiness tonight as I wandered idly, singing in the starlight. Now I'm wonderfully contagious— so kiss me!</p>
+                </div>
+            </div>
+
+            <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ text input ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+            <div class="col-12 col-md-6 my-4 px-0" id="test-wrapper">
+                <div class=" h-100">
+                    <form class="h-100 d-flex flex-column">
+                        <h2 class="text-center my-2 pb-2 succes-text" id="test-area-header-succes">You did It!</h2>
+                        <label for="test-area" class="d-block text-center my-2 pb-2" id="test-area-header">Write here as quick as you can</label>
+                        <textarea class="my-auto text-area px-4 py-2" id="test-area" autofocus placeholder="The clock starts when you start typing."></textarea>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-12 col-md-6 my-4 px-0">
+                <div id="clock">
+                    <div class="timer text-center" id="timer">00:00:00</div>
+                </div>
+            </div>
+            <div class="col-12 col-md-6 my-4 px-0">
+                <div class="text-center">
+                    <button class="" id="reset">Start over</button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script src="script.js" async></script>
+</body>
+
+</html>
